@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}My Favorites{% endblock title %}
+
+{% block content %}
+<br>
+<div class="row">
+    {% for favorite in my_favorite %}
+    <div class="col-md-4">
+        <div class="card my-card">
+          {% if favorite.restaurant.logo %}
+            <img class="card-img-top" src="{{favorite.restaurant.logo.url}}" alt="Hey Noob, look at me...">
+          {% endif %}
+          <div class="card-body">
+            <h5 class="card-title">{{favorite.restaurant.name}}</h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item text-center">
+            </li>
+          </ul>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
