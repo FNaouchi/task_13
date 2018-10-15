@@ -14,7 +14,7 @@
             {% csrf_token %}
             {{form|crispy}}
             <input type="submit" value="Signin" class="btn btn-outline-success">
-            <a class="btn btn-outline-primary fab fa-facebook" href="{% url 'github_login' %}"></a>  
+            <a class="btn btn-outline-primary fab fa-github" href="{% url 'github_login' %}"></a>  
         </form>
     </p>
   </div>
